@@ -14,8 +14,17 @@ from app.api.v1.views import app_views
 from app.api.v1.views.utilities.encode import generate_keccak256_hash
 from eth_abi import decode
     
+
+# Get current file directory
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Build path dynamically to CertificateVerifier.json
+json_file_path = os.path.normpath(
+    os.path.join(current_dir, '..', '..', '..', '..', 'contracts', 'artifacts', 'contracts', 'Certificate.sol', 'CertificateVerifier.json')
+)
+
 # Initialize Flask app and Web3 provider
-with open('/home/queens/Blockchain-Certificate-Verification-System/Backend/contracts/artifacts/contracts/Certificate.sol/CertificateVerifier.json') as f:
+with open(json_file_path, 'r') as f:
     certificate_json = json.load(f)
 
 contract_abi = certificate_json['abi']
