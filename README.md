@@ -19,7 +19,7 @@ This is a Flask web server that connects users, schools, and certificates to a b
 Clone the repository:
 
 ```
-git clone https://github.com/queensk/Blockchain-Certificate-Verification-System.git
+git clone https://github.com/justfumz/Blockchain-Certificate-Verification-System.git
 ```
 
 ## start the frontend

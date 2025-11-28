@@ -10,5 +10,27 @@
 4. BACKEND  >>>in another terminal
 	cd backend
 	pip install -r requirements.txt
-	python3 -m app.api.v1.app
+	DO:
+		$env:BCV_MYSQL_USER = "root"
+		$env:BCV_MYSQL_PWD = "Funmi1998"
+		$env:BCV_MYSQL_HOST = "localhost"
+		$env:BCV_MYSQL_DB = "bcv_database"
+		$env:BCV_TYPE_STORAGE = "db"
+		$env:BCV_API_HOST = "0.0.0.0"
+		$env:BCV_API_PORT = "5000"
+		$env:BCV_ENV = "dev"
+		$env:SECRET_KEY = "supersecretkey123"
+	
+	DO this after 5
+		py -3.10 -m app.api.v1.app
+
+
+5. CONTRACTS >>>in another terminal
+
+	cd contracts
+	npm i
+	npx hardhat node
+>>>in another terminal
+	npx hardhat run scripts/deploy.js --network localhost
+
 
