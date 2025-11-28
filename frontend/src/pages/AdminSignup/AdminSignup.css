@@ -1,22 +1,25 @@
 .SignUpForm {
   background: rgba(19, 35, 47, 0.9);
   padding: 40px;
-  max-width: 600px;
-  margin: 40px auto;
-  border-radius: 4px;
+  max-width: 70%;
+  margin: 20px auto;
+  border-radius: 20px;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
 }
+
 .ToggleForm {
   list-style: none;
   padding: 0;
   margin: 0 0 40px 0;
   display: flex;
 }
+
 .ToggleForm:after {
   content: "";
   display: table;
   clear: both;
 }
+
 .ToggleForm li {
   display: block;
   text-decoration: none;
@@ -30,20 +33,24 @@
   cursor: pointer;
   transition: 0.5s ease;
 }
+
 .ToggleForm li:hover {
   background: #179b77;
   color: #ffffff;
 }
+
 .ToggleForm .active {
   background: #1ab188;
   color: #ffffff;
 }
+
 .SignUpForm h1 {
   text-align: center;
   color: #ffffff;
   font-weight: 300;
   margin: 0 0 40px;
 }
+
 .SignUpForm label {
   /* position: absolute; */
   transform: translateY(6px);
@@ -57,46 +64,57 @@
 
 input,
 textarea {
-  font-size: 22px;
+  font-size: 14px;
   display: block;
-  width: 100%;
+  width: 70%;
   height: 100%;
   padding: 10px;
+  margin: 0 auto;
   background: none;
   background-image: none;
   border: 1px solid #a0b3b0;
   color: #ffffff;
-  border-radius: 0;
+  border-radius: 5px;
+  text-align: center;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
+
 input:focus,
 textarea:focus {
   outline: 0;
+  width: 80%;
   border-color: #1ab188;
 }
+
 textarea {
   border: 2px solid #a0b3b0;
   resize: vertical;
 }
+
 .btn_login {
-  border: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px 4px 4px 4px;
+  display: block;
+  text-align: center;
+  margin: 5px auto;
+  padding: 14px, 35px;
+  border: 3px solid #82ad70ec;
   outline: none;
-  border-radius: 0;
-  padding: 15px 20px;
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  background: #1ab188;
-  color: #ffffff;
-  transition: all 0.5s ease;
-  /* -webkit-appearance: none; */
+  transition: 0.25px;
+  font-size: 16px;
+  cursor: pointer;
 }
-.btn_login:hover 
-/* .btn_login:focus  */ {
-  background: #00de71;
+
+.btn_login:hover
+
+/* .btn_login:focus  */
+  {
+  background: #599578;
 }
+
 .button-block {
   display: block;
-  width: 100%;
+  width: 30%;
 }

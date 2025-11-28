@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import TextInput from "../TextInput/TextInput";
-import api from "../../api/api.jsx";
-import MessagePopUp from "../MessagePopUp/MessagePopUp";
+import React, { useState } from 'react';
+import TextInput from '../TextInput/TextInput';
+import api from '../../api/api.jsx';
+import MessagePopUp from '../MessagePopUp/MessagePopUp';
 
 export default function SignUpInput() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [userEmail, setUserEmail] = useState("");
-  const [userPassword, setUserPassword] = useState("");
-  const [signUpMessage, setSignUpMessage] = useState("");
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [userEmail, setUserEmail] = useState('');
+  const [userPassword, setUserPassword] = useState('');
+  const [signUpMessage, setSignUpMessage] = useState('');
 
   const data = {
     email: userEmail,
@@ -19,18 +19,18 @@ export default function SignUpInput() {
   const handleFormSubmit = (event) => {
     event.preventDefault();
     if (!firstName || !lastName || !userEmail || !userPassword) {
-      setSignUpMessage("Please fill out all fields.");
+      setSignUpMessage('Please fill out all fields.');
       return;
     }
     api
-      .post("/users", data)
+      .post('/users', data)
       .then((response) => {
         if (response.status === 201) {
           setSignUpMessage(`Successfully SignUp ${response.data.email}`);
-          setUserPassword("");
-          setUserEmail("");
-          setLastName("");
-          setFirstName("");
+          setUserPassword('');
+          setUserEmail('');
+          setLastName('');
+          setFirstName('');
         }
       })
       .catch((error) => {
@@ -47,9 +47,7 @@ export default function SignUpInput() {
         <MessagePopUp message={signUpMessage} setMessage={setSignUpMessage} />
       )}
       <form onClick={(e) => e.preventDefault}>
-        <div>
-          <h1>Sign Up</h1>
-        </div>
+        <div>{/* <h1>Sign Up</h1> */}</div>
         <TextInput
           label="first name"
           type="text"

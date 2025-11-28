@@ -54,7 +54,7 @@ export default function SignIn({ authenticated, setToken, token }) {
       {!isLoading && (
         <form onSubmit={(e) => e.preventDefault()}>
           <div>
-            <h1>Sign In</h1>
+            {/* <h1>Sign In</h1> */}
           </div>
           <TextInput
             label="email"
