@@ -1,0 +1,14 @@
+1. git clone https://github.com/justfumz/Blockchain-Certificate-Verification-System.git
+
+2. cd Blockchain-Certificate-Verification-System
+
+3. FRONTEND
+	cd frontend
+	npm i
+	npm start
+
+4. BACKEND  >>>in another terminal
+	cd backend
+	pip install -r requirements.txt
+	python3 -m app.api.v1.app
+
